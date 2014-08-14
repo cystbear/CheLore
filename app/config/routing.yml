@@ -1,0 +1,4 @@
+che_lore:
+    resource: "@CheLoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

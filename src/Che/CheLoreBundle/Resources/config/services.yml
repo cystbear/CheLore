@@ -1,0 +1,7 @@
+parameters:
+#    che_lore.example.class: Che\CheLoreBundle\Example
+
+services:
+#    che_lore.example:
+#        class: %che_lore.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

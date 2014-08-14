@@ -1,0 +1,3 @@
+che_lore_index:
+    path:     /
+    defaults: { _controller: CheLoreBundle:Default:index }
