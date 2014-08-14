@@ -12,7 +12,7 @@ use Che\CheLoreBundle\Document\Test;
 /**
  * @MongoDB\Document
  */
-class Сourse extends Base
+class Course extends Base
 {
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
