@@ -1,0 +1,34 @@
+Che\CheLoreBundle\Document\Question (local):
+    advanced-php-test-1-question-1:
+        subject: 'How to install php?'
+        answers:
+            - 'I don''t know'
+            - 'it''s easy'
+        isMultiAnswers: false
+        solution: [1]
+
+    advanced-php-test-1-question-2:
+        subject: 'How to install Symfony?'
+        answers:
+            - 'composer require'
+            - 'composer install'
+            - 'composer create-project'
+        isMultiAnswers: false
+        solution: [3]
+
+    advanced-php-test-1-question-3:
+        subject: 'How to delete yii?'
+        answers:
+            - 'rm -rf /'
+            - 'yii:delete-me'
+            - 'sudo chmod -R / 777'
+        isMultiAnswers: true
+        solution: [1, 2, 3]
+
+Che\CheLoreBundle\Document\Test:
+    advanced-php-test-1:
+        title: 'Advanced PHP (Test 1)'
+        questions:
+            - @advanced-php-test-1-question-1
+            - @advanced-php-test-1-question-2
+            - @advanced-php-test-1-question-3

@@ -1,0 +1,16 @@
+Che\CheLoreBundle\Document\User:
+    fred:
+        username: 'fred'
+        plainPassword: 'fred'
+        email: 'fred@example.org'
+        enabled: true
+    bonnie:
+        username: 'bonnie'
+        plainPassword: 'bonnie'
+        email: 'bonnie@example.org'
+        enabled: true
+    clyde:
+        username: 'clyde'
+        plainPassword: 'clyde'
+        email: 'clyde@example.org'
+        enabled: true

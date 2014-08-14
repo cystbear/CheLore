@@ -1,0 +1,5 @@
+Che\CheLoreBundle\Document\Сourse:
+    advanced-php:
+        title: 'Advanced PHP'
+        teachers: [@fred, @clyde]
+        tests: [@advanced-php-test-1]

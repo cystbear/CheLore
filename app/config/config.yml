@@ -60,3 +60,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: mongodb
+    firewall_name: main
+    user_class: Che\CheLoreBundle\Document\User
+    registration:
+        confirmation:
+            enabled:    false
+#            from_email:
+#                address:        %user_confirmation_address%
+#                sender_name:    %user_confirmation_sender%
+
+stof_doctrine_extensions:
+    mongodb:
+        default:
+            sluggable: true
+            timestampable: true
+
+

@@ -2,27 +2,24 @@
 
 namespace Che\CheLoreBundle\DataFixtures\MongoDB;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Hautelook\AliceBundle\Alice\DataFixtureLoader as DataFixtureLoaderBase;
 
-class LoadData implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
+class LoadData extends DataFixtureLoaderBase implements OrderedFixtureInterface
 {
-    protected $container;
-
     public function getOrder()
     {
         return 100;
     }
 
-    public function setContainer(ContainerInterface $container = null)
+    protected function getFixtures()
     {
-        $this->container = $container;
-    }
+        $path = __DIR__ . '/data';
 
-    public function load(ObjectManager $manager)
-    {
+        return  array(
+            $path . '/users.yml',
+            $path . '/tests.yml',
+            $path . '/courses.yml',
+        );
     }
 }
