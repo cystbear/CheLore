@@ -96,8 +96,4 @@ class Question
     {
         return $this->subject;
     }
-
-
-
-
 }
