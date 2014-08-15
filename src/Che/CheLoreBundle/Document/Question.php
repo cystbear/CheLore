@@ -5,10 +5,17 @@ namespace Che\CheLoreBundle\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
- * @MongoDB\EmbeddedDocument
+ * @MongoDB\Document(collection="question")
  */
 class Question
 {
+    /**
+     * @var \MongoId
+     *
+     * @MongoDB\Id
+     */
+    private $id;
+
     /**
      * @MongoDB\String
      */
@@ -28,6 +35,14 @@ class Question
      * @MongoDB\Hash
      */
     protected $solution;
+
+    /**
+     * @return \MongoId
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * @param mixed $answers

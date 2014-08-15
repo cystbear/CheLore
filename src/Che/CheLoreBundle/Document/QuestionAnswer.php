@@ -13,7 +13,7 @@ class QuestionAnswer
 {
     /**
      * @var \Che\CheLoreBundle\Document\Question
-     * @MongoDB\EmbedOne(targetDocument="Che\CheLoreBundle\Document\Question")
+     * @MongoDB\ReferenceOne(targetDocument="Che\CheLoreBundle\Document\Question")
      */
     private $question;
 

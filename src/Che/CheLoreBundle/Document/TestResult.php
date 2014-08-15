@@ -10,13 +10,12 @@ use Che\CheLoreBundle\Document\User;
 use Che\CheLoreBundle\Document\QuestionAnswer;
 
 /**
- * @MongoDB\Document
+ * @MongoDB\Document(collection="test_result")
  */
 class TestResult
 {
     /**
      * @var \MongoId
-     *
      * @MongoDB\Id
      */
     private $id;

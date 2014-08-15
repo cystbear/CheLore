@@ -4,13 +4,16 @@ Che\CheLoreBundle\Document\User:
         plainPassword: 'fred'
         email: 'fred@example.org'
         enabled: true
+        roles: [ROLE_SUPER_ADMIN]
     bonnie:
         username: 'bonnie'
         plainPassword: 'bonnie'
         email: 'bonnie@example.org'
         enabled: true
+        roles: [ROLE_TEACHER]
     clyde:
         username: 'clyde'
         plainPassword: 'clyde'
         email: 'clyde@example.org'
         enabled: true
+        roles: [ROLE_STUDENT]

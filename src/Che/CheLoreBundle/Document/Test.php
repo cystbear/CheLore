@@ -9,19 +9,26 @@ use Che\CheLoreBundle\Document\BaseDocument as Base;
 use Che\CheLoreBundle\Document\Question;
 
 /**
- * @MongoDB\Document
+ * @MongoDB\Document(collection="test")
  */
 class Test extends Base
 {
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @MongoDB\EmbedMany(targetDocument="Che\CheLoreBundle\Document\Question")
+     * @MongoDB\ReferenceMany(targetDocument="Che\CheLoreBundle\Document\Question")
      */
     private $questions;
+
+    /**
+     * @var bool
+     * @MongoDB\Boolean
+     */
+    private $isActive;
 
     public function __construct()
     {
         $this->questions = new ArrayCollection();
+        $this->isActive = true;
     }
 
     /**
@@ -50,5 +57,23 @@ class Test extends Base
         $this->getQuestions()->add($question);
 
         return $this;
+    }
+
+    /**
+     * @param boolean $isActive
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
     }
 }

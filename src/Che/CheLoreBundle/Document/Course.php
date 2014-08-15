@@ -10,7 +10,7 @@ use Che\CheLoreBundle\Document\User;
 use Che\CheLoreBundle\Document\Test;
 
 /**
- * @MongoDB\Document
+ * @MongoDB\Document(collection="course")
  */
 class Course extends Base
 {

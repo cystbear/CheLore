@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique;
 
 /**
- * @MongoDB\Document
+ * @MongoDB\Document(collection="user")
  * @Unique(fields="email", errorPath="email", message="fos.user.email.used")
  * @Unique(fields="username", errorPath="username", message="fos.user.username.used")
  */

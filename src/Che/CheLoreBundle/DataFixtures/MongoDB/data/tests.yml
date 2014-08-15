@@ -1,11 +1,11 @@
-Che\CheLoreBundle\Document\Question (local):
+Che\CheLoreBundle\Document\Question:
     advanced-php-test-1-question-1:
         subject: 'How to install php?'
         answers:
             - 'I don''t know'
             - 'it''s easy'
         isMultiAnswers: false
-        solution: [1]
+        solution: [2]
 
     advanced-php-test-1-question-2:
         subject: 'How to install Symfony?'

@@ -1,4 +1,4 @@
-Che\CheLoreBundle\Document\Сourse:
+Che\CheLoreBundle\Document\Course:
     advanced-php:
         title: 'Advanced PHP'
         teachers: [@fred, @clyde]
