@@ -22,6 +22,13 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Hautelook\AliceBundle\HautelookAliceBundle(),
 
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
+
             new Che\CheLoreBundle\CheLoreBundle(),
         );
 

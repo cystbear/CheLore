@@ -20,7 +20,9 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
-        "hautelook/alice-bundle": "dev-master"
+        "hautelook/alice-bundle": "dev-master",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-mongodb-admin-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
