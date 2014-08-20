@@ -12,55 +12,45 @@ use Gedmo\Mapping\Annotation as Gedmo;
 abstract class BaseDocument
 {
     /**
-     * @var \MongoId
-     *
      * @MongoDB\Id
      */
     private $id;
 
     /**
-     * @var string
-     *
-     * @MongoDB\String()
+     * @MongoDB\String
      * @Assert\Length(min=3, max=100)
      */
     private $title;
 
     /**
-     * @var string
-     *
      * @MongoDB\String
      * @Gedmo\Slug(fields={"title"}, updatable=true)
      */
     private $slug;
 
     /**
-     * @var \DateTime
-     *
      * @MongoDB\Date
      * @Gedmo\Timestampable(on="create")
      */
     private $created;
 
     /**
-     * @var \DateTime
-     *
      * @MongoDB\Date
      * @Gedmo\Timestampable(on="update")
      */
     private $updated;
 
-    /**
-     * @return \MongoId
-     */
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param string $title
-     */
     public function setTitle($title)
     {
         $this->title = $title;
@@ -68,17 +58,11 @@ abstract class BaseDocument
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getTitle()
     {
         return $this->title;
     }
 
-    /**
-     * @param string $slug
-     */
     public function setSlug($slug)
     {
         $this->slug = $slug;
@@ -86,17 +70,11 @@ abstract class BaseDocument
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getSlug()
     {
         return $this->slug;
     }
 
-    /**
-     * @param \DateTime $created
-     */
     public function setCreated($created)
     {
         $this->created = $created;
@@ -104,17 +82,11 @@ abstract class BaseDocument
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getCreated()
     {
         return $this->created;
     }
 
-    /**
-     * @param \DateTime $updated
-     */
     public function setUpdated($updated)
     {
         $this->updated = $updated;
@@ -122,9 +94,6 @@ abstract class BaseDocument
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getUpdated()
     {
         return $this->updated;

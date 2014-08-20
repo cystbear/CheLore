@@ -14,13 +14,11 @@ use Che\CheLoreBundle\Document\Question;
 class Test extends Base
 {
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     * @MongoDB\ReferenceMany(targetDocument="Che\CheLoreBundle\Document\Question")
+     * @MongoDB\ReferenceMany(targetDocument="Che\CheLoreBundle\Document\Question", cascade="all")
      */
     private $questions;
 
     /**
-     * @var bool
      * @MongoDB\Boolean
      */
     private $isActive;
@@ -31,9 +29,6 @@ class Test extends Base
         $this->isActive = true;
     }
 
-    /**
-     * @param \Doctrine\Common\Collections\ArrayCollection $questions
-     */
     public function setQuestions($questions)
     {
         $this->questions = $questions;
@@ -41,17 +36,11 @@ class Test extends Base
         return $this;
     }
 
-    /**
-     * @return \Doctrine\Common\Collections\ArrayCollection
-     */
     public function getQuestions()
     {
         return $this->questions;
     }
 
-    /**
-     * @return \Che\CheLoreBundle\Document\Question
-     */
     public function addQuestion(Question $question)
     {
         $this->getQuestions()->add($question);
@@ -59,9 +48,6 @@ class Test extends Base
         return $this;
     }
 
-    /**
-     * @param boolean $isActive
-     */
     public function setIsActive($isActive)
     {
         $this->isActive = $isActive;
@@ -69,9 +55,6 @@ class Test extends Base
         return $this;
     }
 
-    /**
-     * @return boolean
-     */
     public function getIsActive()
     {
         return $this->isActive;

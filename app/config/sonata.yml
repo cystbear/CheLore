@@ -5,3 +5,9 @@ sonata_block:
         sonata.admin.block.admin_list:
             contexts:   [admin]
         # Your other blocks
+
+sonata_admin:
+    title:      GeekHub Lore
+#    title_logo: img/logo_small.png
+    templates:
+        edit:        CheLoreBundle:admin:base_edit.html.twig

@@ -6,16 +6,46 @@
 
     <services>
 
-       <service id="sonata.admin.course" class="Che\CheLoreBundle\Admin\CourseAdmin">
-          <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Course"/>
-          <argument />
-          <argument>Che\CheLoreBundle\Document\Course</argument>
-          <argument />
-          <call method="setTranslationDomain">
-              <argument>CheLoreBundle</argument>
-          </call>
-      </service>
+        <service id="sonata.admin.course" class="Che\CheLoreBundle\Admin\CourseAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Course"/>
+            <argument />
+            <argument>Che\CheLoreBundle\Document\Course</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>CheLoreBundle</argument>
+            </call>
+        </service>
 
-   </services>
+        <service id="sonata.admin.test" class="Che\CheLoreBundle\Admin\TestAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Content" label="Test"/>
+            <argument />
+            <argument>Che\CheLoreBundle\Document\Test</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>CheLoreBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.question" class="Che\CheLoreBundle\Admin\QuestionAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" show_in_dashboard="false"/>
+            <argument />
+            <argument>Che\CheLoreBundle\Document\Question</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>CheLoreBundle</argument>
+            </call>
+        </service>
+
+        <service id="sonata.admin.answer" class="Che\CheLoreBundle\Admin\AnswerAdmin">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" show_in_dashboard="false"/>
+            <argument />
+            <argument>Che\CheLoreBundle\Document\Answer</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>CheLoreBundle</argument>
+            </call>
+        </service>
+
+    </services>
 
 </container>

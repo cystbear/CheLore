@@ -2,16 +2,17 @@
 
 namespace Che\CheLoreBundle\Document;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Che\CheLoreBundle\Document\Answer;
 
 /**
  * @MongoDB\Document(collection="question")
+ * @MongoDB\HasLifecycleCallbacks
  */
 class Question
 {
     /**
-     * @var \MongoId
-     *
      * @MongoDB\Id
      */
     private $id;
@@ -22,7 +23,7 @@ class Question
     protected $subject;
 
     /**
-     * @MongoDB\Hash
+     * @MongoDB\EmbedMany(targetDocument="Che\CheLoreBundle\Document\Answer", )
      */
     protected $answers;
 
@@ -31,84 +32,78 @@ class Question
      */
     protected $isMultiAnswers;
 
-    /**
-     * @MongoDB\Hash
-     */
-    protected $solution;
+    public function __construct()
+    {
+        $this->answers = new ArrayCollection();
+    }
 
-    /**
-     * @return \MongoId
-     */
+    public function __toString()
+    {
+        return $this->getSubject();
+    }
+
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $answers
-     */
     public function setAnswers($answers)
     {
         $this->answers = $answers;
+
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
     public function getAnswers()
     {
         return $this->answers;
     }
 
-    /**
-     * @param mixed $isMultiAnswers
-     */
-    public function setIsMultiAnswers($isMultiAnswers)
+
+    public function addAnswer(Answer $answer)
     {
-        $this->isMultiAnswers = $isMultiAnswers;
+        $this->getAnswers()->add($answer);
+
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+    public function setIsMultiAnswers($isMultiAnswers)
+    {
+        $this->isMultiAnswers = $isMultiAnswers;
+
+        return $this;
+    }
+
     public function getIsMultiAnswers()
     {
         return $this->isMultiAnswers;
     }
 
-    /**
-     * @param mixed $solution
-     */
-    public function setSolution($solution)
-    {
-        $this->solution = $solution;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSolution()
-    {
-        return $this->solution;
-    }
-
-    /**
-     * @param mixed $subject
-     */
     public function setSubject($subject)
     {
         $this->subject = $subject;
+
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
     public function getSubject()
     {
         return $this->subject;
+    }
+
+    /**
+     * @MongoDB\PrePersist
+     * @MongoDB\PreUpdate
+     */
+    public function defineIsMultiAnswers()
+    {
+        $counter = 0;
+        foreach ($this->getAnswers() as $answer) {
+            if ($answer->getIsCorrect()) {
+                $counter++;
+            }
+        }
+
+        $this->setIsMultiAnswers($counter > 1);
     }
 }
