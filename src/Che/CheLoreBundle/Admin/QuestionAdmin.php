@@ -33,7 +33,7 @@ class QuestionAdmin extends BaseAdmin
                 'type'         => new AnswerType(),
                 'options' => array(
                     'label_attr' => array(
-                        'class' => 'спрячь меня бо я говно'
+                        'class' => 'hide-me'
                     ),
                 ),
                 'allow_add'    => true,

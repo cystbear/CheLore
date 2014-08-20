@@ -10,4 +10,4 @@ sonata_admin:
     title:      GeekHub Lore
 #    title_logo: img/logo_small.png
     templates:
-        edit:        CheLoreBundle:admin:base_edit.html.twig
+        layout: CheLoreBundle:admin:standard_layout.html.twig
