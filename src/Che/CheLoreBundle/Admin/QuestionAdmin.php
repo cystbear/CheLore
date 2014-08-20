@@ -14,7 +14,7 @@ class QuestionAdmin extends BaseAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('subject')
+            ->add('subject', 'textarea')
 
 //            ->add('answers', 'sonata_type_collection',
 //                array(
