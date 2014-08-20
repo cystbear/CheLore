@@ -29,7 +29,7 @@ class QuestionAdmin extends BaseAdmin
 //                )
 //            )
 //
-            ->add('answers', 'collection', array(
+            ->add('answers', 'sonata_type_native_collection', array(
                 'type'         => new AnswerType(),
                 'options' => array(
                     'label_attr' => array(
