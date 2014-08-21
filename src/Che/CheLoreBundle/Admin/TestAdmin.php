@@ -8,7 +8,6 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
 use Che\CheLoreBundle\Admin\BaseAdmin;
-use Symfony\Component\Console\Tests\Helper\QuestionHelperTest;
 
 class TestAdmin extends BaseAdmin
 {
