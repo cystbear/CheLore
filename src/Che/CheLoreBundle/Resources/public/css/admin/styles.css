@@ -2,3 +2,7 @@
     display: none;
     visibility: hidden;
 }
+
+.sonata-collection-add, .sonata-collection-delete {
+    box-shadow: none;
+}
