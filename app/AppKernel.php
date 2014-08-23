@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
 
             new Che\CheLoreBundle\CheLoreBundle(),
+            new Che\CheLoreMongoDBAdminBundle\CheLoreMongoDBAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
