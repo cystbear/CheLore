@@ -6,3 +6,54 @@
 .sonata-collection-add, .sonata-collection-delete {
     box-shadow: none;
 }
+
+.right-side {
+    background-color: rgb(249, 249, 249);
+    background-repeat: repeat
+}
+
+.content {
+    background: none;
+}
+
+.sonata-collection-delete {
+    color:#fff;
+    background-color:#d9534f;
+    border-color:#d43f3a;
+    padding: 2px 6px;
+    margin: 30px 15px;
+    float: left;
+}
+
+.sonata-collection-delete:hover {
+    color:#fff;
+    background-color:#c9302c;
+    border-color:#ac2925
+}
+
+.sonata-collection-add {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 2px 6px;
+    margin: 3px;
+}
+.sonata-collection-add:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.fa-plus-circle{
+    margin-right: 10px;
+}
+
+.answers-group .form-group {
+    float: left;
+    margin-right: 15px;
+}
+.answers-group .form-group:last-child {
+    float:none;
+}
+.sonata-collection-row{
+    line-height: 35px;
+}
