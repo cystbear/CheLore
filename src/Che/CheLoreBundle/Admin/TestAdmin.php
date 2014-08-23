@@ -14,30 +14,17 @@ class TestAdmin extends BaseAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('title')
-            ->add('isActive', 'checkbox', array('required' => false))
-//            ->add('questions', 'sonata_type_collection',
-//                array(
-//                    'label' => 'Questions',
-//                    'by_reference' => false,
-//                    'type' => 'sonata_type_admin',
-//                ),
-//                array(
-//                    'edit' => 'inline',
-//                    'inline' => 'table',
-//                    'allow_delete' => true,
-//                )
-//            )
-            ->add('questions', 'sonata_type_native_collection', array(
-                'type'         => new QuestionType(),
-                'options' => array(
-                    'label_attr' => array(
-                        'class' => 'hide-me'
-                    ),
-                ),
-                'allow_add'    => true,
-                'allow_delete' => true,
-            ))
+            ->with('Test Meta')
+                ->add('title')
+                ->add('isActive', 'checkbox', array('required' => false))
+            ->end()
+            ->with('Questions')
+                ->add('questions', 'sonata_type_native_collection', array(
+                    'type'         => new QuestionType(),
+                    'allow_add'    => true,
+                    'allow_delete' => true,
+                ))
+            ->end()
         ;
     }
 
