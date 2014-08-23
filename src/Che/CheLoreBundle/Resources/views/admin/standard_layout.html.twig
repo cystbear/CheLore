@@ -1,7 +1,8 @@
 {% extends 'SonataAdminBundle::standard_layout.html.twig' %}
-        {% block stylesheets %}
-            {% for stylesheet in admin_pool.getOption('stylesheets', []) %}
-                <link rel="stylesheet" type="text/css" href="{{ asset(stylesheet) }}"  />
-            {% endfor %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/chelore/css/admin/styles.css') }}"  />
-        {% endblock %}
+
+{% block stylesheets %}
+    {% for stylesheet in admin_pool.getOption('stylesheets', []) %}
+        <link rel="stylesheet" type="text/css" href="{{ asset(stylesheet) }}"  />
+    {% endfor %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/chelore/css/admin/styles.css') }}"  />
+{% endblock %}
