@@ -1,22 +1,41 @@
 Che\CheLoreBundle\Document\Answer (local):
-    answ-1:
+    answ-1-1:
+        answer: OOP
+        isCorrect: false
+    answ-1-2:
+        answer: C$
+        isCorrect: false
+    answ-1-3:
+        answer: Ruby
+        isCorrect: true
+    answ-1-4:
+        answer: Scala
+        isCorrect: true
+    answ-1-5:
+        answer: Groovy
+        isCorrect: true
+    answ-2-1:
         answer: composer require
         isCorrect: false
-    answ-2:
+    answ-2-2:
         answer: composer install
         isCorrect: false
-    answ-3:
+    answ-2-3:
         answer: composer create-project
         isCorrect: true
 
 
 Che\CheLoreBundle\Document\Question:
+    advanced-php-test-1-question-1:
+        subject: 'Виберіть із переліку мови програмування'
+        answers: [@answ-1-1, @answ-1-2, @answ-1-3, @answ-1-4, @answ-1-5]
     advanced-php-test-1-question-2:
         subject: 'How to install Symfony?'
-        answers: [@answ-1, @answ-2, @answ-3]
+        answers: [@answ-2-1, @answ-2-2, @answ-2-3]
 
 Che\CheLoreBundle\Document\Test:
     advanced-php-test-1:
-        title: 'Advanced PHP (Test 1)'
+        title: 'Advanced PHP (2014-2015)'
         questions:
+            - @advanced-php-test-1-question-1
             - @advanced-php-test-1-question-2
