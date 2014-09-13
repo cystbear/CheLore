@@ -6,13 +6,14 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Che\CheLoreBundle\Document\BaseDocument as Base;
-use Che\CheLoreBundle\Document\Question;
 
 /**
  * @MongoDB\Document(collection="test")
  */
 class Test extends Base
 {
+    use TimestampableTrait;
+
     /**
      * @MongoDB\ReferenceMany(targetDocument="Che\CheLoreBundle\Document\Question", cascade="all")
      */

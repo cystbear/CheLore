@@ -28,18 +28,6 @@ abstract class BaseDocument
      */
     private $slug;
 
-    /**
-     * @MongoDB\Date
-     * @Gedmo\Timestampable(on="create")
-     */
-    private $created;
-
-    /**
-     * @MongoDB\Date
-     * @Gedmo\Timestampable(on="update")
-     */
-    private $updated;
-
 
     public function __toString()
     {
@@ -73,29 +61,5 @@ abstract class BaseDocument
     public function getSlug()
     {
         return $this->slug;
-    }
-
-    public function setCreated($created)
-    {
-        $this->created = $created;
-
-        return $this;
-    }
-
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-
-        return $this;
-    }
-
-    public function getUpdated()
-    {
-        return $this->updated;
     }
 }

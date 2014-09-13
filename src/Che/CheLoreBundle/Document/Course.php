@@ -14,6 +14,8 @@ use Che\CheLoreBundle\Document\Test;
  */
 class Course extends Base
 {
+    use TimestampableTrait;
+
     /**
      * @MongoDB\ReferenceMany(targetDocument="Che\CheLoreBundle\Document\User")
      */
