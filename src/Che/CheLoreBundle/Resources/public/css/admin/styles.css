@@ -54,6 +54,10 @@
 .answers-group .form-group:last-child {
     float:none;
 }
+.answers-group .form-group .checkbox {
+    padding-top: 35px;
+}
 .sonata-collection-row{
     line-height: 35px;
+    margin-bottom: 21px;
 }
