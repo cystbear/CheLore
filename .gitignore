@@ -1,4 +1,8 @@
 /web/bundles/
+/web/assets/
+/web/css/
+/web/fonts/
+/web/js/
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
@@ -10,3 +14,5 @@
 /bin/*
 !bin/reload
 /composer.phar
+/app/SymfonyRequirements.php
+/app/check.php
