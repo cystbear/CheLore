@@ -1,0 +1,20 @@
+{% extends "SonataAdminBundle:CRUD:base_edit.html.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $( document ).ready(function() {
+            var $answersGroup = $('.answers-group');
+            $answersGroup.parent().append('<a href="#" class="answers-show">Show/Hide Answers</a>');
+            $answersGroup.hide();
+
+            $('.answers-show').click(function (event) {
+                event.preventDefault();
+                if ($answersGroup.is(":visible")) {
+                    $(this).parent().find('.answers-group').hide(200);
+                } else {
+                    $(this).parent().find('.answers-group').show(200);
+                }
+            });
+        });
+    </script>
+{% endblock %}
