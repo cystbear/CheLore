@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c07203ebca75a865af4334fa8febff0",
+    "hash": "5daabc08f94c5b89b80f6d4a8a7f5c91",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1234,6 +1234,37 @@
             "time": "2014-01-12 16:20:24"
         },
         {
+            "name": "keboola/csv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/keboola/php-csv.git",
+                "reference": "d46da2e92bc44250a535bc2afc4c73a4be1d459a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/keboola/php-csv/zipball/d46da2e92bc44250a535bc2afc4c73a4be1d459a",
+                "reference": "d46da2e92bc44250a535bc2afc4c73a4be1d459a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Keboola\\Csv": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Keboola CSV reader and writer",
+            "homepage": "http://keboola.com",
+            "time": "2014-05-01 17:36:54"
+        },
+        {
             "name": "knplabs/knp-menu",
             "version": "dev-master",
             "source": {
@@ -1796,12 +1827,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "11f8a60cf5cf64531c3d97ee2a3a2dc4eeb2e354"
+                "reference": "6ff7d11c22a78571ecb120930ff322b7ac6bd44e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/11f8a60cf5cf64531c3d97ee2a3a2dc4eeb2e354",
-                "reference": "11f8a60cf5cf64531c3d97ee2a3a2dc4eeb2e354",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/6ff7d11c22a78571ecb120930ff322b7ac6bd44e",
+                "reference": "6ff7d11c22a78571ecb120930ff322b7ac6bd44e",
                 "shasum": ""
             },
             "require": {
@@ -1867,7 +1898,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2014-08-13 07:49:21"
+            "time": "2014-08-21 07:48:29"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2822,7 +2853,9 @@
             "time": "2014-07-11 03:05:53"
         }
     ],
-    "aliases": [],
+    "aliases": [
+
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "doctrine/mongodb-odm-bundle": 20,
@@ -2831,11 +2864,14 @@
         "friendsofsymfony/user-bundle": 20,
         "hautelook/alice-bundle": 20,
         "sonata-project/admin-bundle": 20,
-        "sonata-project/doctrine-mongodb-admin-bundle": 20
+        "sonata-project/doctrine-mongodb-admin-bundle": 20,
+        "keboola/csv": 20
     },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": []
+    "platform-dev": [
+
+    ]
 }
