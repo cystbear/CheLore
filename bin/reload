@@ -28,8 +28,10 @@ show_run("schema:create", "app/console doctrine:mongodb:schema:create");
 show_run("fixtures:load", "app/console doctrine:mongodb:fixtures:load --no-interaction");
 
 
-//show_run("assets:install", "bower install");
+show_run("bower install", "bower install");
+show_run("Installing Glyphicons", "php app/console braincrafted:bootstrap:install");
 show_run("assets:install", "php app/console assets:install web");
+show_run("assetic:dump", "php app/console assetic:dump");
 show_run("Changing permissions", "chmod -R 777 app/cache app/logs");
 
 exit(0);

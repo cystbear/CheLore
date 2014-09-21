@@ -1,0 +1,20 @@
+{
+  "name": "CheLore",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cystbear/CheLore",
+  "authors": [
+    "Sergey Polischuk <spolischook@gmail.com>",
+    "Oleg Zinchenko"
+  ],
+  "description": "LMS for GeekHub project",
+  "keywords": [
+    "LMS",
+    "GeekHub",
+    "php",
+    "Symfony2"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
