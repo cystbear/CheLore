@@ -9,10 +9,11 @@
 
             $('.answers-show').click(function (event) {
                 event.preventDefault();
-                if ($answersGroup.is(":visible")) {
-                    $(this).parent().find('.answers-group').hide(200);
+                var $currentAnswersGroup = $(this).parent().find('.answers-group');
+                if ($currentAnswersGroup.is(":visible")) {
+                    $currentAnswersGroup.hide(200);
                 } else {
-                    $(this).parent().find('.answers-group').show(200);
+                    $currentAnswersGroup.show(200);
                 }
             });
         });
