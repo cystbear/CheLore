@@ -1,3 +1,7 @@
 che_lore_index:
     path:     /
     defaults: { _controller: CheLoreBundle:Default:index }
+
+che_lore_test:
+    resource: "@CheLoreBundle/Controller/TestController.php"
+    type:     annotation
