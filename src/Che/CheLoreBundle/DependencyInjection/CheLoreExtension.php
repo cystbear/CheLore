@@ -25,5 +25,8 @@ class CheLoreExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
         $loader->load('admin.xml');
+
+        // Temporary fix. Delete after merge https://github.com/doctrine/DoctrineMongoDBBundle/pull/270
+        $container->setAlias('doctrine', 'doctrine_mongodb');
     }
 }
