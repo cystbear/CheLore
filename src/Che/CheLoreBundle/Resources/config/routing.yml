@@ -3,5 +3,5 @@ che_lore_index:
     defaults: { _controller: CheLoreBundle:Default:index }
 
 che_lore_test:
-    resource: "@CheLoreBundle/Controller/TestController.php"
-    type:     annotation
+    resource: Che\CheLoreBundle\Controller\TestController
+    type:     rest

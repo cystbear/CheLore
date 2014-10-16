@@ -2,34 +2,49 @@
 
 namespace Che\CheLoreBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\Annotations\View;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Che\CheLoreBundle\Document\Test;
 
-/**
- * @Route("/tests")
- */
-class TestController extends Controller
+class TestController extends FOSRestController
 {
     /**
-     * @Route("/")
-     * @Method("GET")
-     * @Template
+     * @View(templateVar="tests")
+     * @ApiDoc(
+     *  resource=true,
+     *  section="Tests",
+     *  description="Get all tests",
+     *  output = "array<Che\CheLoreBundle\Document\Test> as tests",
+     *  statusCodes={
+     *      200="Returned when successful",
+     *  }
+     * )
      */
-    public function listAction()
+    public function getTestsAction()
     {
-        return ['tests' => $this->getDoctrine()->getRepository('CheLoreBundle:Test')->findAll()];
+        return $this->getDoctrine()->getRepository('CheLoreBundle:Test')->findAll();
     }
 
     /**
-     * @Route("/{slug}")
-     * @Method("GET")
-     * @Template("CheLoreBundle:Test:show.html.twig", vars={"test"})
+     * @View()
+     * @ApiDoc(
+     *  resource=true,
+     *  section="Tests",
+     *  description="Get Test by slug",
+     *  output = "Che\CheLoreBundle\Document\Test",
+     *  statusCodes={
+     *      200="Returned when successful",
+     *      404="Returned when test with given slug is not found"
+     *  }
+     * )
+     * @ParamConverter("test", class="CheLoreBundle:Test", options={"repository_method" = "findOneBySlug"})
      * @param Test $test
+     * @return \Che\CheLoreBundle\Document\Test
      */
-    public function showAction(Test $test)
+    public function getTestAction(Test $test)
     {
+        return $test;
     }
 }

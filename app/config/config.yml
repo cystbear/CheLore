@@ -25,6 +25,9 @@ framework:
     fragments:       ~
     http_method_override: true
 
+sensio_framework_extra:
+    view:    { annotations: false }
+
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
@@ -76,6 +79,16 @@ fos_user:
 #            from_email:
 #                address:        %user_confirmation_address%
 #                sender_name:    %user_confirmation_sender%
+
+fos_rest:
+    view:
+        view_response_listener: force
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['json', 'xml', 'html'], fallback_format: json, prefer_extension: false }
+
+nelmio_api_doc:
+    name: Che Testing System
 
 stof_doctrine_extensions:
     mongodb:

@@ -1,0 +1,5 @@
+<ul>
+{% for test in tests %}
+    <li><a href="{{ path('get_test', {'test': test.slug}) }}">{{ test.title }}</a></li>
+{% endfor %}
+</ul>
