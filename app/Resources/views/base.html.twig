@@ -2,12 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}CheLore Testing System{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block stylesheets %}
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% block body %}
+        <div class="container">
+            {% block menu %}
+                {% include 'navbar.html.twig' %}
+            {% endblock %}
+            {% block content %}{% endblock content %}
+        </div>
+        {% block footer %}{% endblock %}
+    {% endblock %}
+        {% block javascripts %}
+            {% javascripts
+                '../vendor/bower-components/jquery/dist/jquery.js'
+                '../vendor/twbs/bootstrap/dist/js/bootstrap.js'
+            output='js/scripts.js'
+            %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "295dc8c9c0e1e7460136076db201aaa3",
+    "hash": "17d83e242f329cc3a3efceac2a9f7bdc",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2244,6 +2244,33 @@
             "time": "2014-10-12 13:38:01"
         },
         {
+            "name": "nervo/yuicompressor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nervo/yuicompressor.git",
+                "reference": "e6e3b215c3998cf6092613c002ae533ae75d7ada"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nervo/yuicompressor/zipball/e6e3b215c3998cf6092613c002ae533ae75d7ada",
+                "reference": "e6e3b215c3998cf6092613c002ae533ae75d7ada",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "YUI Compressor is an open source tool that supports the compression of both JavaScript and CSS files. The JavaScript compression removes comments and white-spaces as well as obfuscates local variables using the smallest possible variable name. CSS compression is done using a regular-expression-based CSS minifier.",
+            "homepage": "https://github.com/yui/yuicompressor",
+            "keywords": [
+                "java",
+                "yui"
+            ],
+            "time": "2013-09-13 10:26:14"
+        },
+        {
             "name": "phpcollection/phpcollection",
             "version": "dev-master",
             "source": {
@@ -3656,7 +3683,8 @@
         "braincrafted/bootstrap-bundle": 20,
         "friendsofsymfony/rest-bundle": 20,
         "jms/serializer-bundle": 20,
-        "nelmio/api-doc-bundle": 20
+        "nelmio/api-doc-bundle": 20,
+        "nervo/yuicompressor": 20
     },
     "prefer-stable": false,
     "platform": {

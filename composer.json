@@ -28,7 +28,8 @@
         "twbs/bootstrap": "3.*",
         "friendsofsymfony/rest-bundle": "1.5.*@dev",
         "jms/serializer-bundle": "0.13.*@dev",
-        "nelmio/api-doc-bundle": "2.7.*@dev"
+        "nelmio/api-doc-bundle": "2.7.*@dev",
+        "nervo/yuicompressor": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
